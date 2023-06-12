@@ -19,8 +19,6 @@ public class MaintenanceController {
         return currentMessage;
     }
 
-    private static String Message;
-
     @GetMapping("/api/message")
     public String getMessage() {
         return currentMessage;
@@ -31,9 +29,4 @@ public class MaintenanceController {
         currentMessage = message;
         return "ok";
     }
-    public static String getcurrentMessage(){
-        return currentMessage;
-    }
-
-
 }
