@@ -29,4 +29,10 @@ public class MaintenanceController {
         currentMessage = message;
         return "ok";
     }
+
+    @GetMapping("/api/message/reset")
+    public static String resetMessage(){
+        currentMessage = defaultMessage;
+        return "ok";
+    }
 }
