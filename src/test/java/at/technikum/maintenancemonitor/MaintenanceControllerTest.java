@@ -11,9 +11,15 @@ class MaintenanceControllerTest {
     }
 
     @Test
-    void SetMessage() {
+    void SetMessage(){
         String example = "Apfel";
         MaintenanceController.setMessage(example);
         assertEquals(MaintenanceController.getCurrentMessage(), example);
+    }
+
+    @Test
+    void resetMessage(){
+        MaintenanceController.resetMessage();
+        assertEquals(MaintenanceController.getCurrentMessage(), MaintenanceController.getDefaultMessage());
     }
 }
